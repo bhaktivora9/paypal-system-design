@@ -22,7 +22,7 @@ public class Solution {
 
     	PaymentMethodFactory factory = new PaymentMethodFactory(config);
     	//service responsible for executing payment service 
-    	
+    	//TODO:  Add metrics collector.
         PaymentService paymentService = new PaymentService(factory);
         
         // Process each payment

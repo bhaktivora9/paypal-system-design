@@ -15,7 +15,7 @@ public abstract class AbstractPaymentMethod implements PaymentMethod {
 
 	@Override
 	public final void pay(double amount) {
-		// TODO validate amount if amt is valid, String, .. Can be done on FE.
+		// TODO validate amount if amt is valid, String,
 		executePayment(amount);
 	}
 
