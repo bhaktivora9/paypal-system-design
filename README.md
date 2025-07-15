@@ -1,14 +1,6 @@
-## PayPal System Design
-### Q3. Payment Service 
-This repository demonstrates a simple payment processing system in Java, inspired by PayPal features. It supports:
-
-- **Installment Payments**: Split PayPal payments into two installments with interest.
-- **Reward Points**: Earn and redeem reward points for eligible credit card payments.
-- **Configurable Rules**: Easily adjust reward rates, interest, and limits in the code.
-
+### SYSTEM-DESIGN: PAYMENT-SERVICE
 
 ### File Overview
-
 - `Payment.java` – Handles business logic for payments, installments, and rewards.
 - `PaymentConfig.java` – Sets rules for rewards, limits, and interest.
 - `PaymentService.java` – Processes each payment.
@@ -20,14 +12,13 @@ This repository demonstrates a simple payment processing system in Java, inspire
 
 ### Running the Program
 
-1. Compile the Java source files:
-   ```sh
-   javac src/com/paypal/assessment/q2/**/*.java
-   ```
-2. Run the main class:
-   ```sh
-   java com.paypal.assessment.q2.Solution
-   ```
+### How to RUN this : 
+
+```bash
+> mvn install
+> mvn clean compile
+> mvn exec:java -Dexec.mainClass="com.paypal.assessment.q2.Solution"
+```
 
 3. Follow the CLI prompts:
    - Enter the number of payments to process.

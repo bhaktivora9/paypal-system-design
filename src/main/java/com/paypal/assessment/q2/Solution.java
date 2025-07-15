@@ -30,6 +30,8 @@ public class Solution {
     
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+    	System.out.println("====================Enter the vaulues : ");
         
         int n = Integer.parseInt(reader.readLine().trim());
         List<String> methods = new ArrayList<>();
