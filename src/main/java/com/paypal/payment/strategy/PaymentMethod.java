@@ -1,4 +1,4 @@
-package com.paypal.payment.payment;
+package com.paypal.payment.strategy;
 
 public interface PaymentMethod {
     

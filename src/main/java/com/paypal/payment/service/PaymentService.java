@@ -1,7 +1,7 @@
 package com.paypal.payment.service;
 
-import com.paypal.payment.payment.PaymentMethod;
-import com.paypal.payment.payment.PaymentMethodFactory;
+import com.paypal.payment.strategy.PaymentMethod;
+import com.paypal.payment.strategy.PaymentMethodFactory;
 
 public class PaymentService {
 

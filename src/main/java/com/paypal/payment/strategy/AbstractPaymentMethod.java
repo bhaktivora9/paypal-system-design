@@ -1,4 +1,4 @@
-package com.paypal.payment.payment;
+package com.paypal.payment.strategy;
 
 import com.paypal.payment.config.PaymentConfiguration;
 import com.paypal.payment.util.Utils;
