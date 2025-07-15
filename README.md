@@ -19,7 +19,7 @@ This repository demonstrates a simple payment processing system in Java, inspire
    ```
    
    
-3. **Run:**
+4. **Run:**
    ```bash
 ./mvnw exec:java -Dexec.mainClass="com.paypal.payment.Solution"
    ```
