@@ -1,11 +1,20 @@
 package com.paypal.assessment.q2.domain;
 
+import com.paypal.assessment.q2.enums.PaymentMethod;
+import com.paypal.assessment.q2.exception.InvalidPaymentDataException;
+import com.paypal.assessment.q2.validation.PaymentValidator;
+
 public class Payment {
 	private final double amount;
 	private final String customerId;
 	private final String method;
 
-	public Payment(double amount, String customerId, String method) {
+	public Payment(double amount, String customerId, String method) throws InvalidPaymentDataException {
+		// Validate inputs
+		PaymentValidator.validateAmount(amount);
+		PaymentValidator.validateCustomerId(customerId);
+		PaymentValidator.validatePaymentMethod(method);
+		
 		this.amount = amount;
 		this.customerId = customerId;
 		this.method = method;
@@ -14,11 +23,11 @@ public class Payment {
 	// DOMAIN METHODS - Core Business Logic
 
 	public boolean canUseInstallments() {
-		return amount > 0 && "PayPal".equals(method);
+		return amount > 0 && PaymentMethod.PAYPAL.getMethodName().equals(method);
 	}
 
 	public boolean canEarnRewards() {
-		return amount >= 1.0 && "CreditCard".equals(method);
+		return amount >= 1.0 && PaymentMethod.CREDIT_CARD.getMethodName().equals(method);
 	}
 
 	public InstallmentResult calculateInstallments(int count, double interestRate) {
